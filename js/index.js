@@ -35,6 +35,12 @@ $(document).ready(function () {
         $('.pg-3').css('display', 'none');
     });
 
+    $('.process-box').hover(function () {
+        $(this).find('img').addClass('transition');
+    }, function () {
+        $(this).find('img').removeClass('transition');
+    });
+
 });
 
 document.querySelector("#nav-toggle").addEventListener("click", function () {
@@ -43,3 +49,5 @@ document.querySelector("#nav-toggle").addEventListener("click", function () {
     body.classList.toggle('overflow');
     this.classList.toggle("active");
 });
+
+AOS.init();

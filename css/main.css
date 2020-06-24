@@ -52,6 +52,36 @@
     margin-left: 20px;
 }
 
+.nav-links .nav-hover::after {
+    content: "";
+    display: block;
+    height: 2px;
+    background: #fd5714;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+.nav-links .nav-hover:hover::after {
+    width: 100%;
+}
+
+.footer-col-2 .nav-hover::after,
+.footer-col-3 .nav-hover::after {
+    content: "";
+    display: block;
+    height: 2px;
+    background: #fd5714;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+.footer-col-2 .nav-hover:hover::after,
+.footer-col-3 .nav-hover:hover::after {
+    width: 100%;
+}
+
+
+
 /* hamburger menu */
 #nav-toggle {
     display: inline-block;
@@ -341,6 +371,27 @@ body.overflow {
 
 
 /* hero container */
+.section-btn {
+    transition: all .4s ease-in-out;
+}
+
+.section-btn:hover {
+    box-shadow: 0 4px 15px 0 #fd5714;
+    background: #fd5714;
+    color: #ffffff;
+    transition: all .4s ease-in-out;
+}
+
+.details-btn .section-btn:hover {
+    border: none;
+}
+
+.join-btn .section-btn:hover {
+    border: none;
+}
+
+
+
 .hero-container {
     margin-top: 82px;
 }
@@ -448,6 +499,14 @@ body.overflow {
     margin-left: 165px;
     margin-top: 72px;
     grid-gap: 2em;
+}
+
+.service-box:hover {
+    position: relative;
+    top: -3px;
+    left: -3px;
+    box-shadow: 3px 3px 15px 0px rgba(82, 82, 82, 0.85);
+    cursor: pointer;
 }
 
 .service-box img {
@@ -565,6 +624,15 @@ body.overflow {
 
 .process-box {
     text-align: center;
+    cursor: pointer;
+}
+
+.process-box img {
+    transition: all .4s ease-in-out;
+}
+
+.transition {
+    transform: scale(1.2);
 }
 
 .colab-container {
@@ -732,6 +800,7 @@ body.overflow {
 
 
 @media (max-width:600px) {
+
     .hero-container {
         width: fit-content;
     }
